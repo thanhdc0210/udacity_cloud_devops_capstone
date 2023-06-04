@@ -51,7 +51,7 @@ jobs:
           name: push to docker hub
           command: |
             docker logout docker.io
-            docker login docker.io -u $DOCKER_USERNAME --password $DOCKER_PASSWORD
+            docker login docker.io -u $DOCKERHUB_USERNAME --password $DOCKERHUB_PASS
             docker build . -t natsudragneel98/udacity-devops-capstone:latest
             docker tag natsudragneel98/udacity-devops-capstone:latest natsudragneel98/udacity-devops-capstone:latest
             docker push docker.io/natsudragneel98/udacity-devops-capstone:latest
