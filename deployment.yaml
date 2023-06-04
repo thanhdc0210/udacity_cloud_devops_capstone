@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udacity-devops-capston
+  name: udacity-devops-capstone
   labels:
-    app: udacity-devops-capston
+    app: udacity-devops-capstone
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udacity-devops-capston
+      app: udacity-devops-capstone
   template:
     metadata:
       labels:
-        app: udacity-devops-capston
+        app: udacity-devops-capstone
     spec:
       containers:
-        - name: udacity-devops-capston
+        - name: udacity-devops-capstone
           image: docker.io/natsudragneel98/udacity-devops-capstone:latest
           imagePullPolicy: Always
           ports:
