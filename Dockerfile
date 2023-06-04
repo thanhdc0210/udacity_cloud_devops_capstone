@@ -7,13 +7,12 @@ WORKDIR /app
 ## Step 2:
 # Copy source code to working directory
 COPY . /app
+
 ## Step 3:
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
 RUN pip install --upgrade pip==23.1.2 &&\
     pip install -r requirements.txt
-
-fail_lint
 
 ## Step 4:
 # Expose port 80
